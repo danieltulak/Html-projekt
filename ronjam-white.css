@@ -1,0 +1,423 @@
+/* Reset a základní styl */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Grid layout celé stránky */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: 100vh;
+}
+
+header.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px clamp(20px, 5vw, 140px);
+    min-height: 90px;
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    border-bottom: 2px solid rgb(183, 183, 183);
+}
+
+header.header.faded {
+    opacity: 0.90; /* mírná průhlednost */
+}
+
+/* LEVÁ STRANA */
+.header-left .logo {
+    height: clamp(50px, 8vw, 100px);
+    width: auto;
+}
+
+/* STŘED – MENU */
+.header-center {
+    display: flex;
+    gap: clamp(6px, 2vw, 15px);
+    flex-shrink: 1;
+}
+
+.header-center a {
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: clamp(0.9rem, 2.2vw, 1.4rem);
+    padding: clamp(6px, 1.5vw, 12px) clamp(8px, 2vw, 18px);
+    transition: transform 0.2s, opacity 0.2s;
+    white-space: nowrap;
+}
+
+.header-center a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* PRAVÁ STRANA – SOCIALS */
+.socials {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials img {
+    width: clamp(28px, 4vw, 40px);
+    height: auto;;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.socials img.large {
+    width: clamp(36px, 5vw, 55px);
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+/* RESPONSIVE – mobilní zobrazení */
+@media (max-width: 768px) {
+    /* skryjeme původní střední menu */
+    .header-center {
+        display: none;
+    }
+
+    /* zobrazíme mobilní menu s obrázkem */
+    .header-center-mobile {
+        display: flex;
+    }
+}
+
+
+/* Hlavní obsah */
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+section {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    scroll-margin-top: 140px; /* výška headeru */
+}
+
+/* SLIDER */
+
+.slider {
+  width: min(90%, 2000px);
+  aspect-ratio: 16 / 9;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 2px solid rgb(183, 183, 183);
+}
+
+.slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* viditelný obrázek */
+.slider img.active {
+  opacity: 1;
+}
+
+/* POPISEK */
+.center-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* horizontální centrování */
+    text-align: center;
+    padding: 80px 20px;      /* prostor kolem */
+    background-color: black;
+}
+
+.center-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.center-section p {
+    max-width: 700px;        /* aby text nebyl příliš široký */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.black-section {
+    color: white;
+    background-color: black;
+}
+
+/* BIOGRAFIE */
+
+.image-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Nadpis sekce */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* každý sudý řádek otočíme */
+.image-text:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.image-text img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.image-text .text {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   /* horizontálně */
+    text-align: center;
+}
+
+.image-text h2 {
+    font-size: 2.2rem;
+    color: black;
+}
+
+.image-text p {
+    max-width: 700px;        /* aby text nebyl příliš široký */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+}
+/* mobil */
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-text:nth-child(even) {
+        flex-direction: column; /* zrušíme střídání */
+    }
+
+    .image-text img {
+        width: 100%;
+        max-width: 280px;
+    }
+    header.header {
+        padding: 10px 20px;
+        min-height: 70px;
+    }
+
+    .header-center {
+        gap: 8px;
+    }
+
+    /* skryjeme původní střední menu */
+    .header-center {
+        display: none;
+    }
+
+    /* zobrazíme mobilní menu s obrázkem */
+    .header-center-mobile {
+        display: flex;
+    }
+}
+
+.sekce4 {
+    height: 400px;              /* fixní výška sekce */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertikální zarovnání */
+    align-items: center;        /* horizontální zarovnání */
+    text-align: center;
+}
+
+.sekce4 .contact-item {
+    margin-bottom: 10px;
+}
+
+.sekce4 .label {
+    font-weight: bold;          /* zvýraznění "Email" */
+    text-transform: uppercase; /* volitelné */
+}
+
+.sekce4 .value {
+    font-weight: normal;     /* normální text */
+}
+
+/* Barva email odkazu */
+.sekce4 a {
+    color: #9ee8ff;        /* sem dej jakoukoliv barvu */
+    text-decoration: none; /* odstraní podtržení */
+}
+
+.sekce4 h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+.hamburger img {
+    width: clamp(28px, 4vw, 40px); /* stejná velikost jako socials */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburger img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    z-index: 2000;
+}
+
+/* AKTIVNÍ STAV – OTEVŘENO */
+.mobile-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+/* odkazy v menu */
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: bold;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.mobile-menu a:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.close-menu:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+/* ===== MOBIL ===== */
+@media (max-width: 1024px) {
+
+    /* skryjeme desktop menu */
+    .header-center {
+        display: none;
+    }
+
+    /* zobrazíme hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* mobilní rozložení headeru */
+    header.header {
+        justify-content: space-between;
+    }
+
+    .header-right.socials {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    /* aktivní mobilní menu */
+    .mobile-menu.active {
+        display: flex;
+    }
+}
