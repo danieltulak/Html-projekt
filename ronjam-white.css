@@ -162,7 +162,7 @@ section {
     background-color: black;
 }
 
-.center-section h2 {
+.center-section{
     font-size: 2.2rem;
     margin-bottom: 20px;
     color: white;
@@ -201,6 +201,23 @@ section {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+/* section divider */
+
+.divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* horizontální centrování */
+    text-align: center;
+    padding: 80px 20px;      /* prostor kolem */
+    background-color: black;
+}
+
+.divider-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
 }
 
 /* každý sudý řádek otočíme */
