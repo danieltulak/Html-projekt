@@ -207,14 +207,14 @@ section {
 
 .image-text-divider {
     display: flex;
-    flex-direction: column;
-    align-items: center;     /* horizontální centrování */
-    text-align: center;
-    padding: 20px 20px;      /* prostor kolem */
+    justify-content: center;   /* horizontálně */
+    align-items: center;       /* vertikálně */
+    padding: 40px 20px;
     background-color: black;
 }
 
-.image-text-divider-title{
+.image-text-divider-title {
+    margin: 0;
     font-size: 2.2rem;
     color: white;
 }
