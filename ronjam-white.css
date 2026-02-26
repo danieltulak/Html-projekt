@@ -203,6 +203,8 @@ section {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border-radius: 20px;
+    background-color: #E5E5EA;
 }
 
 /* section divider */
@@ -232,9 +234,9 @@ section {
     width: 300px;
     height: auto;
     border-radius: 15px;
-    border-bottom: 2px solid rgb(183, 183, 183);
-    border-top: 2px solid rgb(183, 183, 183);
+    border: 2px solid rgb(183, 183, 183);
 }
+
 
 .image-text .text {
     flex: 1;
@@ -324,6 +326,7 @@ section {
     font-size: 2.2rem;
     margin-bottom: 20px;
     color: white;
+    border-top: 2px solid rgb(183, 183, 183);
 }
 
 /* Footer */
@@ -333,7 +336,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    border-top: 2px solid rgb(183, 183, 183);
 }
 
 /* HAMBURGER */
