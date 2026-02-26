@@ -204,7 +204,6 @@ section {
     justify-content: center;
     gap: 20px;
     border-radius: 20px;
-    background-color: #E5E5EA;
 }
 
 /* section divider */
@@ -301,6 +300,7 @@ section {
     justify-content: center;    /* vertikální zarovnání */
     align-items: center;        /* horizontální zarovnání */
     text-align: center;
+    border-top: 2px solid rgb(183, 183, 183);
 }
 
 .sekce4 .contact-item {
@@ -326,7 +326,6 @@ section {
     font-size: 2.2rem;
     margin-bottom: 20px;
     color: white;
-    border-top: 2px solid rgb(183, 183, 183);
 }
 
 /* Footer */
