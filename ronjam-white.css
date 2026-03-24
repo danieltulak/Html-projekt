@@ -171,7 +171,7 @@ section {
 }
 
 .center-section p {
-    max-width: 700px;        /* aby text nebyl příliš široký */
+    max-width: 750px;        /* aby text nebyl příliš široký */
     font-size: 1.1rem;
     line-height: 1.6;
     color: white;
