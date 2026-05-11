@@ -109,6 +109,13 @@ header.header.faded {
     .header-center-mobile {
         display: flex;
     }
+
+    .slider {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
 }
 
 
