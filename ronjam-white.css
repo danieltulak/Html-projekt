@@ -109,13 +109,6 @@ header.header.faded {
     .header-center-mobile {
         display: flex;
     }
-
-    .slider {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
-        border: none;
-    }
 }
 
 
@@ -272,6 +265,14 @@ section {
 }
 /* mobil */
 @media (max-width: 768px) {
+
+    .slider {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+    
     .image-text {
         flex-direction: column;
         text-align: center;
@@ -433,6 +434,13 @@ footer {
 
 /* ===== Tablet ===== */
 @media (max-width: 1024px) {
+
+    .slider {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
 
     .image-text {
       width: 90%;
