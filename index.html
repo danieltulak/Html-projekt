@@ -32,6 +32,7 @@
             <div class="header-right socials">
                 <a href="https://eu.zonerama.com/RONJAM/1700441" target="_blank">
                     <img src="foto/logo/zonerama-logo.png" alt="Zonerama">
+                </a>
                 <a href="https://www.instagram.com/ronjamband/" target="_blank">
                     <img src="foto/logo/instagram-logo.png" alt="Instagram">
                 </a>
@@ -198,28 +199,6 @@
     </div>
     <script src="java-script/header.hower.js"></script>
     <script src="java-script/slider.js"></script>
-
-    <script>
-    const hamburger = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const closeMenu = document.getElementById("closeMenu");
-    const links = mobileMenu.querySelectorAll("a");
-
-    hamburger.addEventListener("click", () => {
-        mobileMenu.classList.add("active");
-    });
-
-    closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-    });
-
-    links.forEach(link => {
-        link.addEventListener("click", () => {
-            mobileMenu.classList.remove("active");
-        });
-    });
-    </script>
-
-
+    <script src="java-script/hamburger-menu.js"></script>
 </body>
 </html>

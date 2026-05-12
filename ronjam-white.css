@@ -108,6 +108,7 @@ header.header.faded {
     /* zobrazíme mobilní menu s obrázkem */
     .header-center-mobile {
         display: flex;
+
     }
 }
 
@@ -133,7 +134,7 @@ section {
   margin: 40px auto;
   position: relative;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid rgb(183, 183, 183);
 }
 
@@ -203,7 +204,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     background: #eeeef2;
     padding: 20px 40px;
     max-width: 1200px;
@@ -297,6 +298,20 @@ section {
     /* zobrazíme mobilní menu s obrázkem */
     .header-center-mobile {
         display: flex;
+    }
+
+    .slider {
+    width: min(100%, 2000px);
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;   
+    }
+
+    section {
+    padding: 0px 0px 20px 0px;
     }
 }
 
@@ -458,5 +473,19 @@ footer {
     /* aktivní mobilní menu */
     .mobile-menu.active {
         display: flex;
+    }
+
+    .slider {
+    width: min(100%, 2000px);
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;   
+    }
+
+    section {
+    padding: 0px 0px 20px 0px;
     }
 }
