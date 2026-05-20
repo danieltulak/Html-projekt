@@ -25,6 +25,7 @@
                 <a href="#top">Domů</a>
                 <a href="#sekce2">O nás</a>
                 <a href="#sekce3">Biografie</a>
+                <a href="#music">Naše hudba</a>
                 <a href="#sekce4">Kontakt</a>
             </nav>
 
@@ -58,6 +59,7 @@
                 <a href="#top">Domů</a>
                 <a href="#sekce2">O nás</a>
                 <a href="#sekce3">Biografie</a>
+                <a href="#music">Naše hudba</a>
                 <a href="#sekce4">Kontakt</a>
                 
             </nav>
@@ -168,7 +170,131 @@
                 </div>
             </section>
                 
-            
+            <section class="music-section-divider" id="music">
+                <div class="music-section-divider-title">
+                    <h2>Naše hudba</h2>
+                </div>
+            </section>
+
+            <section class="music-section">
+
+                <!-- SONG 1 -->
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Město</h3>
+
+                        <div class="player-row">
+                            <button class="play-btn">▶</button>
+                            <span class="current-time">0:00</span>
+                            <input type="range" class="progress" value="0" min="0" max="100">
+                            <span class="volume-icon">🔊</span>
+                            <input type="range"
+                                class="volume"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
+                            <span class="duration">3:42</span>
+                        </div>
+
+                        <audio src="music/mesto.mp3"></audio>
+                    </div>
+                </div>
+
+                <!-- SONG 2 -->
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Slunce</h3>
+
+                        <div class="player-row">
+                            <button class="play-btn">▶</button>
+                            <span class="current-time">0:00</span>
+                            <input type="range" class="progress" value="0" min="0" max="100">
+                            <span class="volume-icon">🔊</span>
+                            <input type="range"
+                                class="volume"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
+                            <span class="duration">4:01</span>
+                        </div>
+
+                        <audio src="music/slunce.mp3"></audio>
+                    </div>
+                </div>
+
+                <!--
+                    
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3>Písnička 3</h3>
+                            
+                            <div class="player-row">
+                                <button class="play-btn">▶</button>
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="progress" value="0" min="0" max="100">
+                                <span class="volume-icon">🔊</span>
+                                <input type="range"
+                                    class="volume"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    value="1">
+                                <span class="duration">2:58</span>
+                            </div>
+                            
+                            <audio src="music/Mesto.mp3"></audio>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3>Písnička 4</h3>
+                            
+                            <div class="player-row">
+                                <button class="play-btn">▶</button>
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="progress" value="0" min="0" max="100">
+                                <span class="volume-icon">🔊</span>
+                                <input type="range"
+                                    class="volume"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    value="1">
+                                <span class="duration">3:25</span>
+                            </div>
+                            
+                            <audio src="music/Slunce.mp3"></audio>
+                        </div>
+                    </div>
+                    
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3>Písnička 5</h3>
+                            
+                            <div class="player-row">
+                                <button class="play-btn">▶</button>
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="progress" value="0" min="0" max="100">
+                                <span class="volume-icon">🔊</span>
+                                <input type="range"
+                                    class="volume"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    value="1">
+                                <span class="duration">5:12</span>
+                            </div>
+                            
+                            <audio src="music/Mesto.mp3"></audio>
+                        </div>
+                    </div>
+                    
+                -->
+            </section>
             
             
             <section id="sekce4" class="black-section sekce4">
@@ -200,5 +326,6 @@
     <script src="java-script/header.hower.js"></script>
     <script src="java-script/slider.js"></script>
     <script src="java-script/hamburger-menu.js"></script>
+    <script src="java-script/media-player.js"></script>
 </body>
 </html>

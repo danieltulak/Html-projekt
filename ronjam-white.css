@@ -98,21 +98,6 @@ header.header.faded {
 }
 
 
-/* RESPONSIVE – mobilní zobrazení */
-@media (max-width: 768px) {
-    /* skryjeme původní střední menu */
-    .header-center {
-        display: none;
-    }
-
-    /* zobrazíme mobilní menu s obrázkem */
-    .header-center-mobile {
-        display: flex;
-
-    }
-}
-
-
 /* Hlavní obsah */
 main {
     grid-area: main;
@@ -242,7 +227,6 @@ section {
     border: 2px solid rgb(183, 183, 183);
 }
 
-
 .image-text .text {
     flex: 1;
     max-width: 500px;
@@ -264,57 +248,94 @@ section {
     line-height: 1.6;
     color: black;
 }
-/* mobil */
-@media (max-width: 768px) {
-    .image-text {
-        flex-direction: column;
-        text-align: center;
-        width: 90%;
-    }
 
-    .image-text:nth-child(even) {
-        flex-direction: column; /* zrušíme střídání */
-    }
-
-    .image-text img {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    header.header {
-        padding: 10px 20px;
-        min-height: 70px;
-    }
-
-    .header-center {
-        gap: 8px;
-    }
-
-    /* skryjeme původní střední menu */
-    .header-center {
-        display: none;
-    }
-
-    /* zobrazíme mobilní menu s obrázkem */
-    .header-center-mobile {
-        display: flex;
-    }
-
-    .slider {
-    width: min(100%, 2000px);
-    aspect-ratio: 16 / 9;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0;
-    border: none;   
-    }
-
-    section {
-    padding: 0px 0px 20px 0px;
-    }
+/*Přehrávač písniček*/
+.music-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
+.music-section-divider {
+    display: flex;
+    justify-content: center;   /* horizontálně */
+    align-items: center;       /* vertikálně */
+    padding: 40px 20px;
+    background-color: black;
+    border-bottom: 2px solid rgb(183, 183, 183);
+    border-top: 2px solid rgb(183, 183, 183);
+}
+
+.music-section-divider-title h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.song-card {
+    background: #eeeef2;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 16px;
+    padding: 18px 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.song-info h3 {
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+}
+
+.player-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.play-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.play-btn:hover {
+    opacity: 0.8;
+}
+
+.volume {
+    width: 90px;
+    cursor: pointer;
+}
+
+.volume-icon {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.current-time,
+.duration {
+    font-size: 0.95rem;
+    min-width: 42px;
+    text-align: center;
+}
+
+.progress {
+    flex: 1;
+    cursor: pointer;
+}
+
+/*Kontakt*/
 .sekce4 {
     height: 400px;              /* fixní výška sekce */
     display: flex;
@@ -438,9 +459,63 @@ footer {
     opacity: 0.7;
 }
 
+/* mobil */
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .image-text:nth-child(even) {
+        flex-direction: column; /* zrušíme střídání */
+    }
+
+    .image-text img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    header.header {
+        padding: 10px 20px;
+        min-height: 70px;
+    }
+
+    .header-center {
+        gap: 8px;
+    }
+
+    /* skryjeme původní střední menu */
+    .header-center {
+        display: none;
+    }
+
+    .slider {
+    width: min(100%, 2000px);
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;   
+    }
+
+    section {
+    padding: 0px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .volume,
+    .volume-icon {
+        display: none;
+    }
+
+}
 
 /* ===== Tablet ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
     .image-text {
       width: 90%;
     }
