@@ -337,32 +337,41 @@ section {
 
 /*Kontakt*/
 .sekce4 {
-    height: 400px;              /* fixní výška sekce */
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;    /* vertikální zarovnání */
-    align-items: center;        /* horizontální zarovnání */
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     border-top: 2px solid rgb(183, 183, 183);
 }
 
+.kontakt-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* mezera mezi obrázky a textem */
+}
+
+.side-image {
+    width: 200px; /* uprav dle potřeby */
+    height: auto;
+}
+
 .sekce4 .contact-item {
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .sekce4 .label {
-    font-weight: bold;          /* zvýraznění "Email" */
-    text-transform: uppercase; /* volitelné */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .sekce4 .value {
-    font-weight: normal;     /* normální text */
+    font-weight: normal;
 }
 
-/* Barva email odkazu */
 .sekce4 a {
-    color: #9ee8ff;        /* sem dej jakoukoliv barvu */
-    text-decoration: none; /* odstraní podtržení */
+    color: #9ee8ff;
+    text-decoration: none;
 }
 
 .sekce4 h2 {
@@ -502,6 +511,20 @@ footer {
 
     section {
     padding: 0px 0px 20px 0px;
+    }
+
+    .kontakt-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .side-image {
+        width: 120px; /* případně uprav */
+    }
+
+    .sekce4 {
+        height: auto;
+        padding: 40px 20px;
     }
 }
 
