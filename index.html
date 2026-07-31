@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronjamband</title>
+    <meta name="description" content="RONJAM – rocková kapela z Frenštátu pod Radhoštěm. Živá hudba, vlastní tvorba, koncerty.">
+    <title>Ronjam Band</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="ronjam-white.css">
     <link rel="icon" type="image/png" sizes="32x32" href="foto/logo/rj-logo.png">
 </head>
 <body>
-    <body id="top"></body>
+    <div id="top"></div>
     <div class="container">
-        <!-- Header --> 
+
+        <!-- ─── HEADER ─────────────────────────────────────── -->
         <header class="header">
 
-            <!-- LEVÁ STRANA – LOGO -->
+            <!-- Logo -->
             <div class="header-left">
-                <a href="https://ronjam.cz">
-                    <img src="foto/logo/ronjam-bile-logo.png" alt="Logo" class="logo">
+                <a href="https://ronjam.cz" aria-label="RONJAM – domovská stránka">
+                    <img src="foto/logo/ronjam-bile.png" alt="RONJAM logo" class="logo">
                 </a>
             </div>
 
-            <!-- STŘED – MENU -->
-            <nav class="header-center">
+            <!-- Desktop nav -->
+            <nav class="header-center" aria-label="Hlavní navigace">
                 <a href="#top">Domů</a>
                 <a href="#sekce2">O nás</a>
                 <a href="#sekce3">Biografie</a>
@@ -29,72 +33,61 @@
                 <a href="#sekce4">Kontakt</a>
             </nav>
 
-            <!-- PRAVÁ STRANA – SOCIÁLNÍ SÍTĚ -->
+            <!-- Socials + hamburger -->
             <div class="header-right socials">
-                <a href="https://eu.zonerama.com/RONJAM/1700441" target="_blank">
+                <a href="https://eu.zonerama.com/RONJAM/1700441" target="_blank" rel="noopener" aria-label="Zonerama">
                     <img src="foto/logo/zonerama-logo.png" alt="Zonerama">
                 </a>
-                <a href="https://www.instagram.com/ronjamband/" target="_blank">
+                <a href="https://www.instagram.com/ronjamband/" target="_blank" rel="noopener" aria-label="Instagram">
                     <img src="foto/logo/instagram-logo.png" alt="Instagram">
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100091650474363" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100091650474363" target="_blank" rel="noopener" aria-label="Facebook">
                     <img src="foto/logo/facebook-logo.png" alt="Facebook">
                 </a>
-                <a href="https://www.youtube.com/@ronjam2434" target="_blank">
+                <a href="https://www.youtube.com/@ronjam2434" target="_blank" rel="noopener" aria-label="YouTube">
                     <img src="foto/logo/youtube-logo.png" class="large" alt="YouTube">
                 </a>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                     <img src="foto/logo/menu.png" alt="Menu">
+                <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <img src="foto/logo/menu.png" alt="">
                 </button>
             </div>
-            
-
-            <!-- MOBILNÍ MENU -->
-            <nav class="mobile-menu" id="mobileMenu">
-                 <!-- ZAVÍRACÍ KŘÍŽEK -->
-                    <button class="close-menu" id="closeMenu" aria-label="Zavřít menu">
-                        ✕
-                    </button>
-
-                <a href="#top">Domů</a>
-                <a href="#sekce2">O nás</a>
-                <a href="#sekce3">Biografie</a>
-                <a href="#music">Naše hudba</a>
-                <a href="#sekce4">Kontakt</a>
-                
-            </nav>
-
 
         </header>
 
-                
-        <!-- Hlavní obsah -->
+
+        <!-- ─── MAIN ───────────────────────────────────────── -->
         <main>
-            <section>
+
+            <!-- HERO / SLIDER -->
+            <section class="hero-section" aria-label="Fotogalerie">
                 <div class="slider" id="sekce">
-                    <img src="foto/skupinove-foto/Profilovka2024.jpg"  class="active" alt="">
-                    <img src="foto/skupinove-foto/skupinove-foto.jpg" alt="">
-                    <img src="foto/skupinove-foto/koncertovka1.jpg" alt="">
-                    <img src="foto/skupinove-foto/tomas-klus.jpg" alt="">
-                    <img src="foto/skupinove-foto/koncert-foto.jpg" alt="">
-                    <img src="foto/skupinove-foto/michal-kocab-rez.jpg" alt="">
-                    <img src="foto/skupinove-foto/koncertovka2.jpg" alt="">
-                    <img src="foto/skupinove-foto/noname.jpg" alt="">
-                    <img src="foto/skupinove-foto/michal-hruza.jpg" alt="">
-                    <img src="foto/skupinove-foto/leos-mares.jpg" alt="">
+                    <img src="foto/skupinove-foto/Profilovka2024.jpg"  class="active" alt="RONJAM band – profilová fotografie 2024" loading="eager">
+                    <img src="foto/skupinove-foto/skupinove-foto.jpg"  alt="RONJAM – skupinová fotografie" loading="lazy">
+                    <img src="foto/skupinove-foto/koncertovka1.jpg"    alt="RONJAM – koncert" loading="lazy">
+                    <img src="foto/skupinove-foto/tomas-klus.jpg"      alt="RONJAM s Tomášem Klusem" loading="lazy">
+                    <img src="foto/skupinove-foto/koncert-foto.jpg"    alt="RONJAM – koncertní fotografie" loading="lazy">
+                    <img src="foto/skupinove-foto/michal-kocab-rez.jpg" alt="RONJAM s Michalem Kocábem" loading="lazy">
+                    <img src="foto/skupinove-foto/koncertovka2.jpg"    alt="RONJAM – koncert 2" loading="lazy">
+                    <img src="foto/skupinove-foto/noname.jpg"          alt="RONJAM s No Name" loading="lazy">
+                    <img src="foto/skupinove-foto/michal-hruza.jpg"    alt="RONJAM s Michalem Hrůzou" loading="lazy">
+                    <img src="foto/skupinove-foto/leos-mares.jpg"      alt="RONJAM s Leošem Marešem" loading="lazy">
                 </div>
+                <!-- Dot navigation (populated by JS) -->
+                <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Výběr snímku"></div>
             </section>
 
-            <section class="center-section" id="sekce2">
-                <h2>O Nás</h2>
+
+            <!-- O NÁS -->
+            <section class="center-section" id="sekce2" aria-labelledby="about-heading">
+                <h2 id="about-heading">O Nás</h2>
                 <p>
                     Jsme RONJAM, rocková kapela z Frenštátu pod Radhoštěm.
-                    Od roku 2017 hrajeme rock tak, jak nás baví – živě, nahlas a bez přemýšlení nad tím, co zrovna „frčí“. 
+                    Od roku 2017 hrajeme rock tak, jak nás baví – živě, nahlas a bez přemýšlení nad tím, co zrovna „frčí". 
                     Začínali jsme hlavně s věcmi od Deep Purple nebo Lynyrd Skynyrd, díky kterým jsme se sehráli a naučili se pracovat s energií kapely na pódiu.
-                    <br> <br>
+                    <br><br>
                     Z menších vystoupení jsme se postupně dostali i na větší akce, kde jsme měli možnost zahrát jako předskokani interpretů, jako jsou Michal Hrůza, Tomáš Klus, Lake Malawi nebo No Name.
                     Právě koncerty jsou pro nás pořád to hlavní – tam naše hudba žije nejvíc.
-                    <br> <br>
+                    <br><br>
                     Od roku 2024 se soustředíme na vlastní tvorbu.
                     Vychází z klasického rocku, ale nesnažíme se o retro kabát.
                     Dáváme přednost přímočarosti, jasným riffům a společnému zvuku kapely, který vzniká hlavně hraním dohromady.
@@ -104,37 +97,38 @@
                     Baví nás kontakt s lidmi pod pódiem a atmosféra, kdy se publikum stane součástí celého večera.
                 </p>
             </section>
- 
-            
-           <section class="image-text-section" id="sekce3">
-            <h2 class="section-title">Biografie</h2>
-               
-               <div class="image-text">
-                   <img src="foto/profilovky/eli-foto.JPG" alt="Obrázek 1">
-                   <div class="text">
-                       <h2>Roman Eliáš</h2>
-                       <p>Kytara a zpěv</p>
+
+
+            <!-- BIOGRAFIE -->
+            <section class="image-text-section" id="sekce3" aria-labelledby="bio-heading">
+                <h2 class="section-title" id="bio-heading">Biografie</h2>
+
+                <div class="image-text">
+                    <img src="foto/profilovky/eli-foto.JPG" alt="Roman Eliáš" loading="lazy">
+                    <div class="text">
+                        <h2>Roman Eliáš</h2>
+                        <p>Kytara &amp; zpěv</p>
                     </div>
                 </div>
-                
+
                 <div class="image-text">
-                    <img src="foto/profilovky/mirek-foto.JPG" alt="Obrázek 2">
+                    <img src="foto/profilovky/mirek-foto.JPG" alt="Mirek Uvíra" loading="lazy">
                     <div class="text">
                         <h2>Mirek Uvíra</h2>
-                        <p>Baskytara a zpěv</p>
+                        <p>Baskytara &amp; zpěv</p>
                     </div>
                 </div>
-                
+
                 <div class="image-text">
-                    <img src="foto/profilovky/daja-foto1.JPG" alt="Obrázek 3">
+                    <img src="foto/profilovky/daja-foto1.JPG" alt="Dalibor Ťulák" loading="lazy">
                     <div class="text">
                         <h2>Dalibor Ťulák</h2>
                         <p>Klávesy</p>
                     </div>
                 </div>
-                
+
                 <div class="image-text">
-                    <img src="foto/profilovky/jirka-foto.jpg" alt="Obrázek 4">
+                    <img src="foto/profilovky/jirka-foto.jpg" alt="Jirka Uvíra" loading="lazy">
                     <div class="text">
                         <h2>Jirka Uvíra</h2>
                         <p>Bicí</p>
@@ -142,202 +136,129 @@
                 </div>
 
                 <div class="image-text">
-                    <img src="foto/profilovky/dan-foto.jpg" alt="Obrázek 5">
+                    <img src="foto/profilovky/dan-foto.jpg" alt="Daniel Otýpka" loading="lazy">
                     <div class="text">
                         <h2>Daniel Otýpka</h2>
-                        <p>Doprovod a texty</p>
+                        <p>Doprovod &amp; texty</p>
                     </div>
                 </div>
-                
-                <div class="image-text-divider">
-                    <h2 class="image-text-divider-title">Bývalí členové </h2>
+
+                <div class="image-text-divider" role="separator">
+                    <span class="image-text-divider-title">Bývalí členové</span>
                 </div>
-                
+
                 <div class="image-text">
-                    <img src="foto/profilovky/petr-simicek-foto.JPG" alt="Obrázek 6">
+                    <img src="foto/profilovky/petr-simicek-foto.JPG" alt="Petr Šimíček" loading="lazy">
                     <div class="text">
                         <h2>Petr Šimíček</h2>
                         <p>Kytara</p>
                     </div>
                 </div>
-                
+
                 <div class="image-text">
-                    <img src="foto/profilovky/petr-stralka-foto.jpg" alt="Obrázek 7">
+                    <img src="foto/profilovky/petr-stralka-foto.jpg" alt="Petr Střalka" loading="lazy">
                     <div class="text">
                         <h2>Petr Střalka</h2>
                         <p>Baskytara</p>
                     </div>
                 </div>
+
             </section>
-                
-            <section class="music-section-divider" id="music">
+
+
+            <!-- MUSIC DIVIDER -->
+            <section class="music-section-divider" id="music" aria-labelledby="music-heading">
                 <div class="music-section-divider-title">
-                    <h2>Naše hudba</h2>
+                    <h2 id="music-heading">Naše hudba</h2>
                 </div>
             </section>
 
-            <section class="music-section">
+            <!-- MUSIC PLAYER -->
+            <section class="music-section" aria-label="Přehrávač písní">
 
                 <!-- SONG 1 -->
-                <div class="song-card">
+                <div class="song-card" role="region" aria-label="Město">
                     <div class="song-info">
                         <h3>Město</h3>
-
                         <div class="player-row">
-                            <button class="play-btn">▶</button>
-                            <span class="current-time">0:00</span>
-                            <input type="range" class="progress" value="0" min="0" max="100">
-                            <span class="volume-icon">🔊</span>
-                            <input type="range"
-                                class="volume"
-                                min="0"
-                                max="1"
-                                step="0.01"
-                                value="1">
-                            <span class="duration">3:42</span>
+                            <button class="play-btn" aria-label="Přehrát / Pozastavit Město">▶</button>
+                            <span class="current-time" aria-live="polite">0:00</span>
+                            <input type="range" class="progress" value="0" min="0" max="100" aria-label="Průběh přehrávání">
+                            <span class="duration">0:00</span>
+                            <span class="volume-icon" aria-hidden="true">🔊</span>
+                            <input type="range" class="volume" min="0" max="1" step="0.01" value="1" aria-label="Hlasitost">
                         </div>
-
-                        <audio src="music/mesto.mp3"></audio>
+                        <audio src="music/mesto.mp3" preload="metadata"></audio>
                     </div>
                 </div>
 
                 <!-- SONG 2 -->
-                <div class="song-card">
+                <div class="song-card" role="region" aria-label="Slunce">
                     <div class="song-info">
                         <h3>Slunce</h3>
-
                         <div class="player-row">
-                            <button class="play-btn">▶</button>
-                            <span class="current-time">0:00</span>
-                            <input type="range" class="progress" value="0" min="0" max="100">
-                            <span class="volume-icon">🔊</span>
-                            <input type="range"
-                                class="volume"
-                                min="0"
-                                max="1"
-                                step="0.01"
-                                value="1">
-                            <span class="duration">4:01</span>
+                            <button class="play-btn" aria-label="Přehrát / Pozastavit Slunce">▶</button>
+                            <span class="current-time" aria-live="polite">0:00</span>
+                            <input type="range" class="progress" value="0" min="0" max="100" aria-label="Průběh přehrávání">
+                            <span class="duration">0:00</span>
+                            <span class="volume-icon" aria-hidden="true">🔊</span>
+                            <input type="range" class="volume" min="0" max="1" step="0.01" value="1" aria-label="Hlasitost">
                         </div>
-
-                        <audio src="music/slunce.mp3"></audio>
+                        <audio src="music/slunce.mp3" preload="metadata"></audio>
                     </div>
                 </div>
 
-                <!--
-                    
-                    <div class="song-card">
-                        <div class="song-info">
-                            <h3>Písnička 3</h3>
-                            
-                            <div class="player-row">
-                                <button class="play-btn">▶</button>
-                                <span class="current-time">0:00</span>
-                                <input type="range" class="progress" value="0" min="0" max="100">
-                                <span class="volume-icon">🔊</span>
-                                <input type="range"
-                                    class="volume"
-                                    min="0"
-                                    max="1"
-                                    step="0.01"
-                                    value="1">
-                                <span class="duration">2:58</span>
-                            </div>
-                            
-                            <audio src="music/Mesto.mp3"></audio>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="song-card">
-                        <div class="song-info">
-                            <h3>Písnička 4</h3>
-                            
-                            <div class="player-row">
-                                <button class="play-btn">▶</button>
-                                <span class="current-time">0:00</span>
-                                <input type="range" class="progress" value="0" min="0" max="100">
-                                <span class="volume-icon">🔊</span>
-                                <input type="range"
-                                    class="volume"
-                                    min="0"
-                                    max="1"
-                                    step="0.01"
-                                    value="1">
-                                <span class="duration">3:25</span>
-                            </div>
-                            
-                            <audio src="music/Slunce.mp3"></audio>
-                        </div>
-                    </div>
-                    
-                    <div class="song-card">
-                        <div class="song-info">
-                            <h3>Písnička 5</h3>
-                            
-                            <div class="player-row">
-                                <button class="play-btn">▶</button>
-                                <span class="current-time">0:00</span>
-                                <input type="range" class="progress" value="0" min="0" max="100">
-                                <span class="volume-icon">🔊</span>
-                                <input type="range"
-                                    class="volume"
-                                    min="0"
-                                    max="1"
-                                    step="0.01"
-                                    value="1">
-                                <span class="duration">5:12</span>
-                            </div>
-                            
-                            <audio src="music/Mesto.mp3"></audio>
-                        </div>
-                    </div>
-                    
-                -->
             </section>
-            
-            
-            <section id="sekce4" class="black-section sekce4">
-                <h2>Kontakt</h2>
+
+
+            <!-- KONTAKT -->
+            <section id="sekce4" class="black-section sekce4" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Kontakt</h2>
 
                 <div class="kontakt-wrapper">
-                    <a href="https://www.skutecnaliga.cz/">
-                        <img src="foto/logo/skutecna_liga_zakladni_horizontalni_bila.png" alt="Levý obrázek" class="side-image">
-                    </a>
-
                     <div class="contact-item">
-                        <span class="label">Email:</span>
-                        <span class="value">
-                            <a href="mailto:ronjamband@gmail.com">ronjamband@gmail.com</a>
-                        </span>
-                        <br><br>
-
-                        <span class="label">PRESSkit:</span>
-                        <span class="value">
-                            <a href="https://drive.google.com/drive/folders/1AsFdwlWAnDOgcP7xl0lrBvRUHS7Kac6J">PRESSkit</a>
-                        </span>
-                        <br><br>
-
-                        <span class="label">Bandzone:</span>
-                        <span class="value">
-                            <a href="https://bandzone.cz/_115280?at=info&cd=1">Bandzone</a>
-                        </span>
+                        <div class="contact-row">
+                            <span class="label">Email</span>
+                            <span class="value">
+                                <a href="mailto:ronjamband@gmail.com">ronjamband@gmail.com</a>
+                            </span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">PRESSkit</span>
+                            <span class="value">
+                                <a href="https://drive.google.com/drive/folders/1AsFdwlWAnDOgcP7xl0lrBvRUHS7Kac6J" target="_blank" rel="noopener">Stáhnout PRESSkit</a>
+                            </span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="label">Bandzone</span>
+                            <span class="value">
+                                <a href="https://bandzone.cz/_115280?at=info&cd=1" target="_blank" rel="noopener">Bandzone profil</a>
+                            </span>
+                        </div>
                     </div>
-
-                    <a href="https://www.nsef.cz/">
-                        <img src="foto/logo/NSEF_Cerna.jpg" alt="Pravý obrázek" class="side-image">
-                    </a>
                 </div>
             </section>
 
-            
         </main>
 
-        <!-- Footer -->
+
+        <!-- ─── FOOTER ─────────────────────────────────────── -->
         <footer>
-            &copy; 2026 Ronjam Band
+            <small>&copy; 2026 RONJAM &nbsp;·&nbsp; Frenštát pod Radhoštěm</small>
         </footer>
-    </div>
+
+    </div><!-- /.container -->
+
+    <!-- Mobile menu — mimo header, aby backdrop-filter neořezával position:fixed -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobilní navigace" aria-hidden="true">
+        <button class="close-menu" id="closeMenu" aria-label="Zavřít menu">✕</button>
+        <a href="#top">Domů</a>
+        <a href="#sekce2">O nás</a>
+        <a href="#sekce3">Biografie</a>
+        <a href="#music">Naše hudba</a>
+        <a href="#sekce4">Kontakt</a>
+    </nav>
+
     <script src="java-script/header.hower.js"></script>
     <script src="java-script/slider.js"></script>
     <script src="java-script/hamburger-menu.js"></script>
